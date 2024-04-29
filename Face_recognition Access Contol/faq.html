@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>FAQ Section</title>
+
+  <style>
+	.cd-faq {
+  background-color: transparent; /* Adjust the last value (0.8) to change the opacity */
+}
+	/* Adjust the background color of the FAQ groups */
+.cd-faq__group {
+  background-color: transparent;
+}
+
+/* Adjust the background color of the FAQ items */
+.cd-faq__item {
+  background-color: transparent;
+}
+
+.cd-faq__item:hover {
+      background-color: #E1EBEE; /* Change background color on hover */
+    }
+
+body {
+      background-image: url(https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+  </style>
+ 
+</head>
+<body>
+<header class="cd-header flex flex-column flex-center" style="background-color: transparent;">
+  <div class="text-component text-center">
+    <h1 style="color: black;">FAQ</h1>
+
+    </div>
+</header>
+
+<section class="cd-faq js-cd-faq container max-width-md margin-top-0 margin-bottom-lg">
+
+	<ul class="cd-faq__categories">
+		<li><a class="cd-faq__category cd-faq__category-selected truncate" href="#basics">Basics</a></li>
+		<li><a class="cd-faq__category truncate" href="#mobile">Payments</a></li>
+		<li><a class="cd-faq__category truncate" href="#account">Security & Privacy</a></li>
+		<li><a class="cd-faq__category truncate" href="#payments">User Accounts</a></li>
+		<li><a class="cd-faq__category truncate" href="#privacy">Feedback </a></li>
+	</ul> <!-- cd-faq__categories -->
+
+	<div class="cd-faq__items">
+		<ul id="basics" class="cd-faq__group">
+			<li class="cd-faq__title"><h2 style="color: black;">Basics</h2></li>
+			<li class="cd-faq__item">
+			  <a class="cd-faq__trigger" href="#0"><span style="color: black;">How does JourneyEase work?</span></a>
+			  <div class="cd-faq__content">
+				<div class="text-component">
+				  <p style="color: black;">JourneyEase revolutionizes travel by eliminating the need for physical tickets. Simply make your payment online, receive a QR code, and your status will be updated to "paid." When boarding, we'll capture your photo. If it matches and your status is "paid," you're good to go!</p>
+				</div>
+			  </div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">How does the chat section work?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p style="color: black;">After a succesful signup or login user will see "Engage in Real Time communication" option.So user have to click on the same then our chatbot will be opened and you can ask it anything you want!
+            </p>	</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">How do I use JourneyEase?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p><p style="color: black;">Using JourneyEase is simple. Just sign up for an account, make a payment for your desired travel ticket, and receive a digital QR code. When boarding, scan your face and it will recognize you, and you're all set!</p>
+		</p></div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">What modes of transport does JourneyEase support?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p style="color: black;">JourneyEase supports various modes of transport, including trains, buses, ferries, and flights. As long as the transport service partners with JourneyEase, you can use the platform for ticketing.</p></p></div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="mobile" class="cd-faq__group">
+			<li class="cd-faq__title"><h2 style="color: black;">Payments</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">How do I know if my status has been updated to "paid"?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p style="color: black;">Once you've successfully completed your payment, you'll receive a confirmation message along with your updated status. You can also check your account dashboard for real-time status updates.
+			</p> </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">Is it safe to make payments on JourneyEase?</span></a>
+				<div class="cd-faq__content">
+					<div class="text-component">
+						<p style="color: black;">Yes, JourneyEase ensures the security of all payment transactions. We use industry-standard encryption protocols and secure payment gateways to protect your financial information. Your payment details are kept confidential and secure.</p>
+					</div> <!-- cd-faq__content -->
+				</div>
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">What should I do if my payment fails?</span></a>
+				<div class="cd-faq__content">
+					<div class="text-component">
+						<p style="color: black;">If your payment fails for any reason, please double-check your payment details and try again. If the issue persists, contact our customer support team for assistance. They will help you resolve the payment issue promptly.</p>
+					</div> <!-- cd-faq__content -->
+				</div>
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="account" class="cd-faq__group">
+			<li class="cd-faq__title"><h2 style="color: black;">Security & Privacy</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">How does JourneyEase ensure the security of my personal information?</span></a>
+				<div class="cd-faq__content">
+					<div class="text-component">
+						<p style="color: black;">JourneyEase prioritizes the security of your personal information. We employ robust encryption protocols and implement stringent security measures to safeguard your data against unauthorized access. Your privacy and confidentiality are of utmost importance to us.</p>
+					</div> <!-- cd-faq__content -->
+				</div>
+			</li>
+			
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">Does JourneyEase share my personal data with third parties?</span></a>
+				<div class="cd-faq__content">
+					<div class="text-component">
+						<p style="color: black;">No, JourneyEase does not share your personal data with third parties without your explicit consent. We adhere to strict privacy policies and regulations to protect your information. Your data is kept confidential and used only for providing our services to you.</p>
+					</div> <!-- cd-faq__content -->
+				</div>
+			</li>
+			
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">How can I trust JourneyEase with my sensitive information?</span></a>
+				<div class="cd-faq__content">
+					<div class="text-component">
+						<p style="color: black;">You can trust JourneyEase with your sensitive information as we follow industry best practices for data security and privacy. We are committed to transparency and accountability in handling your data. Rest assured that your information is in safe hands.</p>
+					</div> <!-- cd-faq__content -->
+				</div>
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="payments" class="cd-faq__group">
+			<li class="cd-faq__title"><h2 style="color: black;">User Accounts</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">How do I create a user account on the platform?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p style="color: black;">To create a user account, click on the "Sign Up" or "Login" button on the platform's homepage. Fill in the required information, including your email address and a secure password, and follow the prompts to complete the registration process.</p>  </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">Can I have multiple user accounts with the same email address?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p style="color: black;">Generally, each user account requires a unique email address. If you need multiple accounts, consider using different email addresses for each registration.</p></div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">Can I access my JourneyEase account from multiple devices?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p style="color: black;">Yes, you can! JourneyEase is accessible from multiple devices, allowing you to manage your travel seamlessly whether you're using a smartphone, tablet, or computer.
+			</p></div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="privacy" class="cd-faq__group">
+			<li class="cd-faq__title"><h2 style="color: black;">Feedback</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">How can I provide feedback on the platform?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p style="color: black;">To provide feedback, look for a "Submit Feedback" option on the platform. Click on the link, fill out the feedback form, and submit your comments, suggestions, or concerns.</p>  </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">Is my feedback anonymous, or can I include my contact information?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p style="color: black;">You can choose to provide feedback anonymously or include your contact information for follow-up. Including contact details allows us to address specific concerns and keep you informed about any updates.</p></div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">Can I provide feedback on a specific feature or aspect of the platform?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p style="color: black;">Yes, we encourage users to provide feedback on specific features, services, or any aspect of the platform that they find noteworthy. Your input helps us improve and tailor the platform to your needs.</p> </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span style="color: black;">How often is feedback reviewed, and what is the response time?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p style="color: black;">Feedback is regularly reviewed by our team, and response times may vary based on the nature and complexity of the feedback. We strive to address and respond to feedback in a timely manner.</p></div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+	</div> <!-- cd-faq__items -->
+
+	<a href="#0" class="cd-faq__close-panel text-replace">Close</a>
+  
+  <div class="cd-faq__overlay" aria-hidden="true"></div>
+</section> <!-- cd-faq -->
+<script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+<script src="assets/js/main.js"></script> 
+</body>
+</html>

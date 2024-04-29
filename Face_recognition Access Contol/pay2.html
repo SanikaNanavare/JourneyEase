@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Buses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/style_sign.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            color: white;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .radio-container {
+            display: flex;
+            align-items: center;
+        }
+        .radio-container input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body style="background-image: url(https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+    <div class="main-w3layouts wrapper">
+        <h1>Seats are available!</h1>
+        <div class="main-agileinfo">
+            <div class="agileits-top">
+                <form action="pay3.html" method="post">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Bus Name</th>
+                        <th>Departure Time</th>
+                        <th>Fare (in Rs)</th>
+                    </tr>
+                    <tr>
+                        <td class="radio-container"><input type="radio" name="radio_val" value="Blue Shuttle"></td>
+                        <td style="color: black;">Blue Shuttle</td>
+                        <td style="color: black;">09:00 AM</td>
+                        <td style="color: black;">500</td>
+                    </tr>
+                    <tr>
+                        <td class="radio-container"><input type="radio" name="radio_val" value="Green Express"></td>
+                        <td style="color: black;">Green Express</td>
+                        <td style="color: black;">10:30 AM</td>
+                        <td style="color: black;">510</td>
+                    </tr>
+                    <tr>
+                        <td class="radio-container"><input type="radio" name="radio_val" value="Yellow Transit"></td>
+                        <td style="color: black;">Yellow Transit</td>
+                        <td style="color: black;">12:00 PM</td>
+                        <td style="color: black;">450</td>
+                    </tr>
+                    <tr>
+                        <td class="radio-container"><input type="radio" name="radio_val" value="Red Line"></td>
+                        <td style="color: black;">Red Line</td>
+                        <td style="color: black;">01:30 PM</td>
+                        <td style="color: black;">399</td>
+                    </tr>
+                    <tr>
+                        <td class="radio-container"><input type="radio" name="radio_val" value="Purple Cruiser"></td>
+                        <td style="color: black;">Purple Cruiser</td>
+                        <td style="color: black;">03:00 PM</td>
+                        <td style="color: black;">299</td>
+                    </tr>
+                    <tr>
+                        <td class="radio-container"><input type="radio" name="radio_val" value="Orange Runner"></td>
+                        <td style="color: black;">Orange Runner</td>
+                        <td style="color: black;">04:30 PM</td>
+                        <td style="color: black;">510</td>
+                    </tr>
+                    <tr>
+                        <td class="radio-container"><input type="radio" name="radio_val" value="Silver Sprinter"></td>
+                        <td style="color: black;">Silver Sprinter</td>
+                        <td style="color: black;">06:00 PM</td>
+                        <td style="color: black;">678</td>
+                    </tr>
+                    <tr>
+                        <td class="radio-container"><input type="radio" name="radio_val" value="Gold Rider"></td>
+                        <td style="color: black;">Gold Rider</td>
+                        <td style="color: black;">07:30 PM</td>
+                        <td style="color: black;">700</td>
+                    </tr>
+                    <!-- Add similar rows for other buses -->
+                </table>
+                <br>
+                <input type="submit" value="Next">
+
+            </form> 
+            </div>
+        </div>
+
+        <ul class="colorlib-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

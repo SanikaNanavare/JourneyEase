@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payment Confirmation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+      href="css/style_sign.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i"
+      rel="stylesheet"
+    />
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        color: white;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #333;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .qr-code {
+        margin-bottom: 20px;
+      }
+      /* Style for the file input button */
+      .file-input {
+        display: none;
+      }
+      .file-label {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body style="background-image: url(https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+    <div class="main-w3layouts wrapper">
+      <h1>Click your selfie!</h1>
+      <div class="main-agileinfo">
+        <div class="agileits-top">
+          <!-- Option 1: Allow users to upload an image file -->
+          <form action="index5.html" method="post" enctype="multipart/form-data">
+            <input
+              type="file"
+              name="file"
+              accept="image/*"
+              id="fileInput"
+              class="file-input"
+              onchange="previewImage(event)"
+            />
+            <label for="fileInput" class="file-label">Upload Selfie</label>
+            <br />
+            <img
+              id="preview"
+              src="#"
+              alt="Preview"
+              style="display: none; max-width: 100%; margin-top: 10px"
+            />
+            <br /><br />
+            <!-- Button to submit the form -->
+            <input type="submit" value="Done"/>
+          </form>
+        </div>
+      </div>
+
+      <ul class="colorlib-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <script>
+      // Function to preview the uploaded image
+      function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+          var preview = document.getElementById('preview');
+          preview.src = reader.result;
+          preview.style.display = 'block';
+        };
+        reader.readAsDataURL(event.target.files[0]);
+      }
+    </script>
+  </body>
+</html>

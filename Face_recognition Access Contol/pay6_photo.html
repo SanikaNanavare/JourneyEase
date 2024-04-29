@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required library for webcam -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.24/webcam.js"></script>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Photo</title>
+    <style>
+        /* Add your custom styling here */
+        body {
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .row {
+            margin-bottom: 20px;
+        }
+        .col-lg-6 {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .pre_capture_frame {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .after_capture_frame {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .btn-file {
+            background-color: grey;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-file:hover {
+            background-color: grey;
+        }
+        .btn-round {
+            border-radius: 20px;
+        }
+        .btn-success {
+            background-color: grey;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-success:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">	
+        <div class="row">
+          <div class="col-lg-6" align="center">
+              <label>Capture live photo</label>
+              <div id="my_camera" class="pre_capture_frame"></div>
+              <input type="hidden" name="captured_image_data" id="captured_image_data">
+              <br>
+              <input type="button" class="btn btn-info btn-round btn-file" value="Take Snapshot" onClick="take_snapshot()">	
+          </div>
+          <div class="col-lg-6" align="center">
+              <label>Result</label>
+              <div id="results">
+                  <img class="after_capture_frame" src="image_placeholder.jpg" />
+              </div>
+              <br>
+              <button type="button" class="btn btn-success" onclick="saveSnap()">Save Picture</button>
+          </div>	
+        </div><!--  end row -->
+        <!-- Add file input for upload -->
+        <div class="row">
+            <div class="col-lg-12" align="center">
+                <br>
+                <label>Upload from device</label>
+                <input type="file" accept="image/*" class="btn btn-primary btn-round btn-file" onchange="previewFile(event)">
+            </div>
+        </div>
+    </div><!-- end container -->
+
+    <script language="JavaScript">
+        // Configure a few settings and attach camera
+        Webcam.set({
+            width: 350,
+            height: 287,
+            image_format: 'jpeg',
+            jpeg_quality: 90
+        });	 
+        Webcam.attach( '#my_camera' );
+       
+        function take_snapshot() {
+            // Take snapshot and get image data
+            Webcam.snap( function(data_uri) {
+                // Display results in page
+                document.getElementById('results').innerHTML = 
+                '<img class="after_capture_frame" src="'+data_uri+'"/>';
+                $("#captured_image_data").val(data_uri);
+            });	 
+        }
+        
+        // Function to preview the selected file
+        function previewFile(event) {
+            var preview = document.getElementById('results');
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onloadend = function() {
+                preview.innerHTML = '<img class="after_capture_frame" src="' + reader.result + '"/>';
+                $("#captured_image_data").val(reader.result);
+            }
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function saveSnap() {
+            var base64data = $("#captured_image_data").val();
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "capture_image_upload.php",
+                data: {image: base64data},
+                success: function(data) { 
+                    alert(data);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
